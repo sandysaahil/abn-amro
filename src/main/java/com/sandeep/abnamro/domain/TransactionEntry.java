@@ -18,4 +18,14 @@ public class TransactionEntry {
         this.quantityLong = quantityLong;
         this.quantityShort = quantityShort;
     }
+
+    @Override
+    public String toString() {
+        return "TransactionEntry{" +
+                "clientInfo=" + clientInfo +
+                ", productInfo=" + productInfo +
+                ", quantityLong=" + quantityLong +
+                ", quantityShort=" + quantityShort +
+                '}';
+    }
 }

@@ -1,6 +1,5 @@
 package com.sandeep.abnamro.service;
 
-import com.sandeep.abnamro.config.ApplicationPropertiesConfig;
 import com.sandeep.abnamro.domain.ClientInfo;
 import com.sandeep.abnamro.domain.DailyReportOutput;
 import com.sandeep.abnamro.domain.ProductInfo;
@@ -26,13 +25,11 @@ import static java.util.stream.Collectors.groupingBy;
 public class ReportService {
 
     private InputProcessor inputProcessor;
-    private ApplicationPropertiesConfig applicationPropertiesConfig;
     private Util util;
 
     @Autowired
-    public ReportService(final InputProcessor inputProcessor, final ApplicationPropertiesConfig applicationPropertiesConfig, final Util util) {
+    public ReportService(final InputProcessor inputProcessor, final Util util) {
         this.inputProcessor = inputProcessor;
-        this.applicationPropertiesConfig = applicationPropertiesConfig;
         this.util = util;
     }
 

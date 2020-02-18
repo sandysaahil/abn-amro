@@ -18,16 +18,16 @@ import java.util.List;
  * Endpoint API for getting daily transaction report
  */
 
+@Slf4j
 @RestController
 @RequestMapping("/v1")
 public class TransactionController {
 
+    @Autowired
     private ReportService reportService;
 
-    @Autowired
-    public TransactionController(final ReportService reportService) {
-        this.reportService = reportService;
-    }
+
+
 
     /**
      * Returns daily summary report with client information, product information and
@@ -44,7 +44,7 @@ public class TransactionController {
 
             List<DailyReportOutput> dailyReportOutputs = reportService.processInput(filePath);
 
-          //  log.info("The daily transaction report is : ", dailyReportOutputs);
+            log.info("The daily transaction report is : ", dailyReportOutputs);
             return new ResponseEntity<> (dailyReportOutputs, HttpStatus.OK);
 
         } catch (Exception e) {
