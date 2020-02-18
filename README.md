@@ -24,10 +24,6 @@ This will build the application and run the application. It will take a while (5
 ![Output for Daily transaction report](https://github.com/sandysaahil/abn-amro/blob/master/src/main/resources/static/Screenshot%202020-02-17%20at%204.45.35%20PM.png)
 
 
-### API Documentation (Swagger)
-API documentation is available at (once application is deployed) - http://locahost:8080/swagger-ui.html
-
-
 ### Assumptions
 
 1. Input.txt will be available locally. Though the application is written in the way that later external files can be used. As of now no support for external files.
