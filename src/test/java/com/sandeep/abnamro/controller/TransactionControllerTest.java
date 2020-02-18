@@ -82,9 +82,6 @@ public class TransactionControllerTest {
         RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/v1/report");
         MvcResult result = mockMvc.perform(requestBuilder).andReturn();
 
-        System.out.println("____"+result.getResolvedException().getMessage());
-
-
         Assert.assertEquals("500 INTERNAL_SERVER_ERROR \"Some exception\"; nested exception is java.lang.Exception: Some exception", result.getResolvedException().getMessage());
     }
 }
